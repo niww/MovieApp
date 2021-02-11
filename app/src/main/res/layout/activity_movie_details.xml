@@ -16,8 +16,10 @@
         app:layout_constraintGuide_begin="10dp" />
 
 
+
     <ImageView
 
+        app:layout_constraintVertical_chainStyle="spread_inside"
         android:id="@+id/image_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,6 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/movie_name_text"
         />
     <ImageView
+        app:layout_constraintHorizontal_chainStyle="packed"
         android:id="@+id/img_1"
         android:src="@drawable/ic_baseline_star_24"
         android:layout_width="wrap_content"
@@ -120,7 +123,7 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/movie_genre"
         app:layout_constraintBottom_toTopOf="@id/storyline"
-        app:layout_constraintStart_toStartOf="@+id/img_5"
+        app:layout_constraintStart_toEndtOf="@+id/img_5"
         app:layout_constraintEnd_toEndOf="@id/root_end"
 
         />
@@ -159,14 +162,15 @@
         />
 
         <ImageView
+            app:layout_constraintHorizontal_chainStyle="spread"
             android:id="@+id/img_actor_1"
             android:src="@drawable/m1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/cast"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/root_start"
-            app:layout_constraintEnd_toEndOf="@id/img_actor_2"
+            app:layout_constraintStart_toEndOf="@id/root_start"
+            app:layout_constraintEnd_toStartOf="@id/img_actor_2"
             />
         <ImageView
             android:id="@+id/img_actor_2"
@@ -175,8 +179,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/cast"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/img_actor_1"
-            app:layout_constraintEnd_toEndOf="@id/img_actor_3"
+            app:layout_constraintStart_toEndOf="@id/img_actor_1"
+            app:layout_constraintEnd_toStartOf="@id/img_actor_3"
             />
         <ImageView
             android:id="@+id/img_actor_3"
@@ -185,8 +189,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/cast"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/img_actor_2"
-            app:layout_constraintEnd_toEndOf="@id/img_actor_4"
+            app:layout_constraintStart_toEndOf="@id/img_actor_2"
+            app:layout_constraintEnd_toStartOf="@id/img_actor_4"
             />
 
         <ImageView
@@ -196,12 +200,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/cast"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/img_actor_3"
-            app:layout_constraintEnd_toEndOf="@id/root_end"
+            app:layout_constraintStart_toEndOf="@id/img_actor_3"
+            app:layout_constraintEnd_toStartOf="@id/root_end"
             />
-
-
-
 
 
     <androidx.constraintlayout.widget.Guideline
