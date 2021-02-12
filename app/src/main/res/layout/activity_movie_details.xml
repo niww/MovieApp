@@ -71,7 +71,6 @@
         android:text="@string/genre"
         android:textColor="@color/genre_color"
         app:layout_constraintBottom_toTopOf="@id/storyline"
-        app:layout_constraintEnd_toEndOf="@id/root_end"
         app:layout_constraintStart_toStartOf="@+id/root_start"
         app:layout_constraintTop_toBottomOf="@+id/movie_name_text"
         />
@@ -141,7 +140,6 @@
         app:layout_constraintTop_toBottomOf="@id/movie_genre"
         app:layout_constraintBottom_toTopOf="@id/storyline"
         app:layout_constraintStart_toEndOf="@+id/img_5"
-        app:layout_constraintEnd_toStartOf="@id/root_end"
 
         />
 
@@ -153,9 +151,9 @@
         android:text="@string/storyline"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/storyline_full"
-        app:layout_constraintEnd_toEndOf="@id/root_end"
         app:layout_constraintStart_toStartOf="@id/root_start"
-        app:layout_constraintTop_toBottomOf="@+id/movie_genre" />
+        app:layout_constraintTop_toBottomOf="@+id/movie_genre"
+        />
 
     <TextView
         android:layout_marginStart="16dp"
