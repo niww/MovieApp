@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MovieApp</string>
+    <string name="for_age">13+</string>
     <string name="avengers_film">Avengers: End game</string>
     <string name="genre">Action, Adventure, Fantasy</string>
     <string name="storyline">Storyline</string>

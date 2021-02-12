@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.bottom).setOnClickListener {
             val intent = Intent(this, MovieDetailsActivity::class.java)
-            this.startActivity(intent)
+            intent.putExtra("Test", 1)
+            startActivity(intent)
         }
 
     }
