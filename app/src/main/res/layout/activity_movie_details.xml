@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,6 +28,12 @@
         app:layout_constraintStart_toStartOf="@id/root_start"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="for_age" />
     <TextView
 
         android:id="@+id/for_age"
@@ -59,7 +66,12 @@
         app:layout_constraintEnd_toEndOf="@id/root_end"
         app:layout_constraintStart_toStartOf="@id/root_start"
         app:layout_constraintTop_toBottomOf="@id/for_age" />
-
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="movie_genre" />
 
     <TextView
         android:id="@+id/movie_genre"
@@ -69,7 +81,7 @@
         android:textColor="@color/genre_color"
         app:layout_constraintBottom_toTopOf="@id/storyline"
         app:layout_constraintStart_toStartOf="@+id/movie_name_text"
-        app:layout_constraintTop_toBottomOf="@+id/movie_name_text" />
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
 
     <ImageView
         android:id="@+id/img_1"
@@ -139,7 +151,12 @@
         app:layout_constraintTop_toBottomOf="@id/movie_genre"
 
         />
-
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="storyline" />
 
     <TextView
         android:id="@+id/storyline"
@@ -150,7 +167,7 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/storyline_full"
         app:layout_constraintStart_toStartOf="@id/root_start"
-        app:layout_constraintTop_toBottomOf="@+id/movie_genre" />
+        app:layout_constraintTop_toBottomOf="@+id/barrier3" />
 
     <TextView
         android:id="@+id/storyline_full"
@@ -163,7 +180,12 @@
         app:layout_constraintStart_toStartOf="@id/storyline"
         app:layout_constraintTop_toBottomOf="@+id/storyline" />
 
-
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="cast" />
     <TextView
         android:id="@+id/cast"
         android:layout_width="wrap_content"
@@ -171,7 +193,7 @@
         android:text="@string/cast"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/storyline_full"
-        app:layout_constraintTop_toBottomOf="@+id/storyline_full" />
+        app:layout_constraintTop_toBottomOf="@+id/barrier4" />
 
     <ImageView
         android:id="@+id/img_actor_1"
