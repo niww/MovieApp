@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/cast"
+        android:id="@+id/tv_list_movie"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+<androidx.recyclerview.widget.RecyclerView
+
+    android:id="@+id/rv_movie"
+    tools:listitem="@layout/movie_item"
+    app:layout_constraintTop_toBottomOf="@+id/tv_list_movie"
+    app:layout_constraintStart_toStartOf="@id/tv_list_movie"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
